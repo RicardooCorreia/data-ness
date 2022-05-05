@@ -1,0 +1,12 @@
+package com.ricardoocorreia.thesis.contextbrokerkafkaadapter;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ContextBrokerKafkaAdapterApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ContextBrokerKafkaAdapterApplication.class, args);
+    }
+}

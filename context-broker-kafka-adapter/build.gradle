@@ -1,0 +1,42 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.ricardoocorreia.thesis'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Spring Web
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.3.16'
+
+    // Spring Boot
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.6.3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.6.3'
+
+    // Lombok
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+
+    // Spring Kafka
+    implementation group: 'org.springframework.kafka', name: 'spring-kafka', version: '2.8.2'
+
+    // Jackson
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.1'
+
+    // Guava
+    implementation group: 'com.google.guava', name: 'guava', version: '11.0.2'
+
+    // Test
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.6.3'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

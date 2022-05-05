@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'com.ricardoocorreia.thesis'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://packages.confluent.io/maven"
+    }
+}
+
+apply plugin: 'java'
+sourceCompatibility = 11
+targetCompatibility = 11
+
+dependencies {
+
+    implementation project(":model")
+
+    // Beam
+    implementation group: 'org.apache.beam', name: 'beam-sdks-java-core', version: '2.37.0'
+
+    // Beam + Flink
+    implementation group: 'org.apache.beam', name: 'beam-runners-flink-1.13', version: '2.37.0'
+
+    // Beam + Kafka
+    implementation group: 'org.apache.beam', name: 'beam-sdks-java-io-kafka', version: '2.37.0'
+
+    // Kafka
+    implementation group: 'org.apache.kafka', name: 'kafka-clients', version: '3.1.0'
+
+    // Tests
+    testImplementation group: 'org.apache.beam', name: 'beam-runners-direct-java', version: '2.37.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}

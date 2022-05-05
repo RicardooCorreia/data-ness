@@ -1,0 +1,4 @@
+rootProject.name = 'data-ness'
+include 'pipelines:context-provider-pipeline'
+include 'context-broker-kafka-adapter'
+include 'model'

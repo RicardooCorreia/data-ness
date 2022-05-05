@@ -1,0 +1,58 @@
+package com.ricardoocorreia.thesis.model.commons;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public enum ControlledProperty {
+    AIR_POLLUTION("airPollution"),
+    ATMOSPHERIC_PRESSURE("atmosphericPressure"),
+    AVERAGE_VELOCITY("averageVelocity"),
+    BATTERY_LIFE("batteryLife"),
+    BATTERY_SUPPLY("batterySupply"),
+    CDOM("cdom"),
+    CONDUCTANCE("conductance"),
+    CONDUCTIVITY("conductivity"),
+    DEPTH("depth"),
+    EATING_ACTIVITY("eatingActivity"),
+    ELECTRICITY_CONSUMPTION("electricityConsumption"),
+    ENERGY("energy"),
+    FILLING_LEVEL("fillingLevel"),
+    FREE_CHLORINE("freeChlorine"),
+    GAS_CONSUMPTION("gasConsumption"),
+    GATE_OPENING("gateOpening"),
+    HEADING("heading"),
+    HUMIDITY("humidity"),
+    LIGHT("light"),
+    LOCATION("location"),
+    MILKING("milking"),
+    MOTION("motion"),
+    MOVEMENT_ACTIVITY("movementActivity"),
+    NOISE_LEVEL("noiseLevel"),
+    OCCUPANCY("occupancy"),
+    ORP("orp"),
+    P_H("pH"),
+    POWER("power"),
+    PRECIPITATION("precipitation"),
+    PRESSURE("pressure"),
+    REFRACTIVE_INDEX("refractiveIndex"),
+    SALINITY("salinity"),
+    SMOKE("smoke"),
+    SOIL_MOISTURE("soilMoisture"),
+    SOLAR_RADIATION("solarRadiation"),
+    SPEED("speed"),
+    TDS("tds"),
+    TEMPERATURE("temperature"),
+    TRAFFIC_FLOW("trafficFlow"),
+    TSS("tss"),
+    TURBIDITY("turbidity"),
+    WATER_CONSUMPTION("waterConsumption"),
+    WATER_FLOW("waterFlow"),
+    WATER_LEVEL("waterLevel"),
+    WATER_POLLUTION("waterPollution"),
+    WEATHER_CONDITIONS("weatherConditions"),
+    WEIGHT("weight"),
+    WIND_DIRECTION("windDirection"),
+    WIND_SPEED("windSpeed");
+
+    private final String value;
+}
